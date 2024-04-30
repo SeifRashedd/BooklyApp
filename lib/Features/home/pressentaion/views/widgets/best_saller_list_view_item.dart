@@ -22,7 +22,7 @@ class BestSallerListViewItem extends StatelessWidget {
         child: Row(
           children: [
             AspectRatio(
-              aspectRatio: 2.4 / 4,
+              aspectRatio: 2.6 / 4,
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
@@ -71,5 +71,3 @@ class BestSallerListViewItem extends StatelessWidget {
     );
   }
 }
-
-
