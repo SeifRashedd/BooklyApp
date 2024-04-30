@@ -1,7 +1,9 @@
+import 'package:booklyapp/Features/home/pressentaion/views/widgets/books_action.dart';
 import 'package:booklyapp/Features/home/pressentaion/views/widgets/books_rating.dart';
 import 'package:booklyapp/Features/home/pressentaion/views/widgets/custom_book_details_app_bar.dart';
 import 'package:booklyapp/Features/home/pressentaion/views/widgets/custom_book_image.dart';
-import 'package:booklyapp/core/utils/styles.dart';
+import 'package:booklyapp/core/utils/styles.dart'; 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
@@ -19,7 +21,7 @@ class BookDetailsViewBody extends StatelessWidget {
           const CustomBookDetailsAppBar(),
           const Gap(32),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * .20),
+            padding: EdgeInsets.symmetric(horizontal: width * .21),
             child: const CustomBookImage(),
           ),
           const Gap(30),
@@ -42,8 +44,12 @@ class BookDetailsViewBody extends StatelessWidget {
           const BookRating(
             mainAxisAlignment: MainAxisAlignment.center,
           ),
+          const Gap(38),
+          const BooksAction()
         ],
       ),
     );
   }
 }
+
+
