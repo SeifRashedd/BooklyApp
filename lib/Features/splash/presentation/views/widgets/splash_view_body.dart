@@ -7,7 +7,6 @@ import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
-
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
 
