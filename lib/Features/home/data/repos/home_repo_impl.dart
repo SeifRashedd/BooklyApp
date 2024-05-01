@@ -35,8 +35,27 @@ class HomeRepoImpl implements HomeRepo {
   }
 
   @override
-  Future<Either<Failuer, List<BookModel>>> feachFeaturedBooks() {
-    // TODO: implement feachFeaturedBooks
-    throw UnimplementedError();
+  Future<Either<Failuer, List<BookModel>>> feachFeaturedBooks() async {
+   try {
+      var data = await apiService.get(
+          endPoint:
+              'volumes?Filterong=free-ebooks&q=subject:Programming');
+      List<BookModel> books = [];
+      for (var iteam in data['items']) {
+        books.add(BookModel.fromJson(iteam));
+      }
+      return right(books);
+    } catch (e) {
+      if (e is DioException) {
+        return left(
+          ServerFailure.fromDioException(e),
+        );
+      }
+      return left(
+        ServerFailure(
+          e.toString(),
+        ),
+      );
+    }
   }
 }
