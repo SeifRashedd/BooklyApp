@@ -4,8 +4,6 @@ import 'package:equatable/equatable.dart';
 
 part 'featiredbooks_state.dart';
 
-class FeatiredbooksCubit extends Cubit<FeatiredbooksState> {
+class FeatiredbooksCubit extends Cubit<FeaturedbooksState> {
   FeatiredbooksCubit() : super(FeatiredbooksInitial());
-
-  
 }
