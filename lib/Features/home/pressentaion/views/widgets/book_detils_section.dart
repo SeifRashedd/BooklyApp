@@ -17,7 +17,9 @@ class BookDetilsSection extends StatelessWidget {
         const Gap(32),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .21),
-          child: const CustomBookImage(),
+          child: const CustomBookImage(
+            imageUrl:'https://images.app.goo.gl/2ajcMAdMtgW2xiRd7'
+          ),
         ),
         const Gap(30),
         const Text(
