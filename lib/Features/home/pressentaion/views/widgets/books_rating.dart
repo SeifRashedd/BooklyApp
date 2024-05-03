@@ -3,27 +3,31 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 class BookRating extends StatelessWidget {
-  const BookRating(
-      {super.key, this.mainAxisAlignment = MainAxisAlignment.start,});
+  const BookRating({
+    super.key,
+    this.mainAxisAlignment = MainAxisAlignment.start,
+    required this.rating,
+    required this.count,
+  });
   final MainAxisAlignment mainAxisAlignment;
-  // final int rating;
-  // final int count;
+  final int rating;
+  final int count;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: mainAxisAlignment,
-      children: const [
-        Icon(Icons.star, color: Colors.amber),
-        Gap(6.3),
+      children:  [
+        const Icon(Icons.star, color: Colors.amber),
+        const Gap(6.3),
         Text(
-          '4.8',
+          rating.toString(),
           style: Styles.textStyle16,
         ),
-        Gap(9),
-        Opacity(
+        const Gap(9),
+         Opacity(
           opacity: 0.5,
           child: Text(
-            '(2390)',
+            '($count)',
             style: Styles.textStyle14,
           ),
         )

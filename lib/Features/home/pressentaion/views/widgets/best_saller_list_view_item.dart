@@ -49,9 +49,9 @@ class BookListViewItem extends StatelessWidget {
                             .copyWith(fontWeight: FontWeight.bold),
                       ),
                       const Gap(44.3),
-                      const BookRating(
-                      //  rating: ,
-                      //  count: ,
+                       BookRating(
+                       rating: bookModel.volumeInfo.averageRating,
+                       count:bookModel.volumeInfo.ratingsCount ,
                       )
                     ],
                   )

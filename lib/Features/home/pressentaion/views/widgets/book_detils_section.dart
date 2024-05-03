@@ -39,6 +39,8 @@ class BookDetilsSection extends StatelessWidget {
         ),
         const Gap(14),
         const BookRating(
+          rating: 5,
+          count: 250,
           mainAxisAlignment: MainAxisAlignment.center,
         ),
         const Gap(38),
