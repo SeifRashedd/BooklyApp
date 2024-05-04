@@ -8,7 +8,8 @@ import 'package:gap/gap.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
-
+  @override
+  
   @override
   Widget build(BuildContext context) {
     return const CustomScrollView(
