@@ -19,10 +19,10 @@ class SimillerBooksListView extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       itemCount: 10,
       itemBuilder: (context, index) {
-        return const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 5),
+        return  Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 5),
           child: CustomBookImage(
-            imageUrl: 'https://images.app.goo.gl/2ajcMAdMtgW2xiRd7',
+            imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail ,
           ),
         );
       },
