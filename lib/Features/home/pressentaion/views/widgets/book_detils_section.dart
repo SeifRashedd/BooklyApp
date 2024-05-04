@@ -48,7 +48,9 @@ class BookDetilsSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
         ),
         const Gap(38),
-        const BooksAction(),
+        BooksAction(
+          bookModel: bookModel,
+        ),
       ],
     );
   }
